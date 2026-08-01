@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Yayın öncesi [DOMAIN] değerini gerçek alan adıyla değiştirin.
+Sitemap: https://[DOMAIN]/sitemap.xml

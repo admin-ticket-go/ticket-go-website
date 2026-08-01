@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index, follow" />
+  <title>Ticket-Go | Deniz Ulaşımında Güvenilir Teknoloji</title>
+  <meta
+    name="description"
+    content="Ticket-Go; feribot biletleme, rezervasyon ve deniz ulaşımı operasyonları için merkezi teknoloji altyapısı. Turbudur Turizm Şey Ltd. Şti."
+  />
+  <link rel="canonical" href="https://ticket-go.net/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ticket-Go | Deniz Ulaşımında Güvenilir Teknoloji" />
+  <meta
+    property="og:description"
+    content="Feribot biletleme ve deniz ulaşımı için güvenli, merkezi teknoloji platformu."
+  />
+  <meta property="og:url" content="https://ticket-go.net/" />
+  <meta property="og:image" content="https://ticket-go.net/assets/images/slides/slide-1.jpg" />
+  <meta property="og:locale" content="tr_TR" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" href="assets/images/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/images/logo-mark.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#ana-icerik">İçeriğe atla</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#anasayfa" data-home aria-label="Ticket-Go ana sayfa">
+        <img
+          class="brand-logo"
+          src="assets/images/logo.png"
+          alt="Ticket-Go"
+          width="140"
+          height="103"
+        />
+      </a>
+      <button
+        class="nav-toggle"
+        id="nav-toggle"
+        type="button"
+        aria-controls="site-nav"
+        aria-expanded="false"
+        aria-label="Menüyü aç"
+      >
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Ana menü">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#anasayfa" data-home>Ana Sayfa</a></li>
+          <li><a class="nav-link" href="#hakkimizda" data-panel="hakkimizda">Hakkımızda</a></li>
+          <li><a class="nav-link" href="#gizlilik" data-panel="gizlilik">Gizlilik Sözleşmesi</a></li>
+        </ul>
+        <a class="btn btn-header nav-link-pulse" href="#iletisim" data-panel="iletisim">İletişim</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Üst bilgi kartı: menü tıklanınca açılır -->
+  <div
+    class="info-shell"
+    id="info-shell"
+    hidden
+    aria-hidden="true"
+  >
+    <div class="info-backdrop" data-panel="close" tabindex="-1" aria-hidden="true"></div>
+    <div
+      class="info-card"
+      id="info-card"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="info-card-title"
+      tabindex="-1"
+    >
+      <div class="info-card-toolbar">
+        <h2 class="info-card-title" id="info-card-title">Bilgi</h2>
+        <button type="button" class="info-close" id="info-close" aria-label="Kartı kapat">
+          ✕
+        </button>
+      </div>
+      <div class="info-card-body" id="info-card-body">
+        <article class="info-panel" id="hakkimizda" data-title="Hakkımızda" hidden>
+          <div class="content-narrow">
+            <p>
+              <strong>Ticket-Go</strong>,
+              <strong>Turbudur Turizm Şey Ltd. Şti.</strong> tarafından geliştirilen,
+              deniz ulaşımı ve feribot biletleme süreçlerini dijital ortamda güvenli,
+              hızlı ve merkezi şekilde yönetmek amacıyla oluşturulmuş yeni nesil bir
+              teknoloji platformudur.
+            </p>
+            <p>
+              <strong>Turbudur Turizm Şey Ltd. Şti.</strong>, 2011 yılından bu yana
+              turizm sektöründe güven, kalite ve müşteri memnuniyeti odaklı hizmet
+              anlayışıyla faaliyet göstermektedir. Şirketimiz, T.C. Kültür ve Turizm
+              Bakanlığı tarafından verilen
+              <strong>7057 numaralı A Grubu Seyahat Acentesi İşletme Belgesi</strong>’ne
+              sahiptir ve aynı zamanda
+              <strong>Türkiye Seyahat Acentaları Birliği (TÜRSAB)</strong> üyesidir.
+            </p>
+            <p>
+              Yıllara dayanan sektör tecrübemiz ve dijital dönüşüm vizyonumuz
+              doğrultusunda geliştirilen <strong>Ticket-Go</strong>, feribot firmaları,
+              seyahat acenteleri ve yolcular arasında güvenli ve entegre bir biletleme
+              altyapısı sunmayı hedeflemektedir.
+            </p>
+            <p>
+              Platform; feribot seferlerinin görüntülenmesi, elektronik bilet
+              oluşturulması, rezervasyon yönetimi, ek hizmetlerin sunulması, ödeme
+              işlemlerinin güvenli şekilde gerçekleştirilmesi, müşteri yönetimi ve
+              operasyon süreçlerinin merkezi bir sistem üzerinden yürütülmesini sağlayan
+              modern bir teknoloji altyapısına sahiptir.
+            </p>
+            <p>
+              Ticket-Go’nun temel amacı; farklı feribot işletmelerini tek bir platformda
+              buluşturarak kullanıcıların hızlı, güvenli ve kolay şekilde bilet satın
+              alabilmesini sağlamak, aynı zamanda seyahat acenteleri ve iş ortaklarına
+              güçlü bir B2B satış altyapısı sunmaktır.
+            </p>
+            <p>
+              Gelişmiş yazılım mimarisi, yüksek güvenlik standartları ve ölçeklenebilir
+              altyapısı sayesinde Ticket-Go; mobil uygulamalar, B2B acente sistemi ve
+              merkezi backend yapısıyla tüm süreçleri tek noktadan yönetebilen bütünleşik
+              bir ekosistem olarak tasarlanmıştır.
+            </p>
+            <p>
+              Ödeme süreçlerinde uluslararası güvenlik standartları uygulanmakta,
+              kullanıcı verileri yürürlükteki kişisel verilerin korunmasına ilişkin
+              mevzuata uygun şekilde işlenmekte ve tüm işlemler yüksek güvenlik
+              politikaları çerçevesinde gerçekleştirilmektedir.
+            </p>
+            <p>
+              Bugün
+              <a href="https://ticket-go.net" rel="noopener noreferrer"><strong>ticket-go.net</strong></a>
+              üzerinden faaliyetlerini sürdüren Ticket-Go, yalnızca bir bilet satış
+              platformu olmanın ötesinde; deniz ulaşımı sektörünün dijital dönüşümüne
+              katkı sağlayan, güvenilir, yenilikçi ve sürdürülebilir bir teknoloji markası
+              olma hedefiyle çalışmalarını sürdürmektedir.
+            </p>
+            <p>
+              Deneyimli ekibi, güçlü teknolojik altyapısı ve müşteri odaklı hizmet
+              anlayışıyla Ticket-Go, kullanıcılarına güvenli, hızlı ve kesintisiz bir
+              seyahat deneyimi sunmayı amaçlamaktadır.
+            </p>
+            <p>
+              Müşteri memnuniyetini her zaman ön planda tutan yaklaşımımızla, rezervasyon
+              öncesinden seyahat sonrasına kadar tüm süreçlerde güvenilir hizmet sunmaya
+              ve Türkiye’nin deniz ulaşımı alanındaki öncü dijital platformlarından biri
+              olmaya kararlılıkla devam ediyoruz.
+            </p>
+          </div>
+        </article>
+
+        <article class="info-panel legal" id="gizlilik" data-title="Gizlilik ve Kişisel Verilerin Korunması Politikası" hidden>
+          <h3>1. Veri Sorumlusu</h3>
+          <p>
+            6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) uyarınca kişisel
+            verileriniz, veri sorumlusu sıfatıyla
+            <strong>Turbudur Turizm Şey Ltd. Şti.</strong>
+            (“Şirket” veya “Ticket-Go”) tarafından aşağıda belirtilen kapsamda
+            işlenmektedir.
+          </p>
+
+          <h4>İletişim Bilgileri</h4>
+          <ul>
+            <li><strong>Şirket Ünvanı:</strong> Turbudur Turizm Şey Ltd. Şti.</li>
+            <li><strong>Adres:</strong> Cevat Şakir Mah. Asbat Sk. No: 1 Bodrum / Muğla</li>
+            <li><strong>Telefon:</strong> <a href="tel:+905473195005">0547 319 50 05</a></li>
+            <li><strong>Web Sitesi:</strong> <a href="https://ticket-go.net" rel="noopener noreferrer">https://ticket-go.net</a></li>
+            <li><strong>Genel E-posta:</strong> <a href="mailto:info@ticket-go.net">info@ticket-go.net</a></li>
+            <li><strong>KVKK Başvuru E-posta Adresi:</strong> <a href="mailto:kvkk@ticket-go.net">kvkk@ticket-go.net</a></li>
+          </ul>
+
+          <h3>2. Toplanan Kişisel Veriler</h3>
+          <p>
+            Ticket-Go platformu üzerinden sunulan feribot bileti, deniz ulaşımı
+            rezervasyonları ve bağlantılı dijital hizmetlerden yararlanmanız sırasında
+            aşağıdaki kişisel verileriniz işlenebilmektedir.
+          </p>
+
+          <h4>Kimlik Bilgileri</h4>
+          <ul>
+            <li>Ad ve Soyad</li>
+            <li>T.C. Kimlik Numarası</li>
+            <li>Pasaport Numarası (gerektiğinde)</li>
+            <li>Doğum Tarihi</li>
+            <li>Uyruk Bilgisi</li>
+          </ul>
+
+          <h4>İletişim Bilgileri</h4>
+          <ul>
+            <li>Cep Telefonu Numarası</li>
+            <li>E-posta Adresi</li>
+            <li>İkamet Adresi (gerektiğinde)</li>
+          </ul>
+
+          <h4>Rezervasyon ve İşlem Bilgileri</h4>
+          <ul>
+            <li>Satın alınan bilet bilgileri</li>
+            <li>Sefer bilgileri</li>
+            <li>Yolcu bilgileri</li>
+            <li>Araç bilgileri</li>
+            <li>Ek hizmet seçimleri</li>
+            <li>Kampanya kullanımları</li>
+            <li>Rezervasyon ve PNR bilgileri</li>
+            <li>Fatura bilgileri</li>
+          </ul>
+
+          <h4>İşlem Güvenliği Bilgileri</h4>
+          <ul>
+            <li>IP adresi</li>
+            <li>Tarayıcı bilgileri</li>
+            <li>İşlem zamanı</li>
+            <li>Cihaz bilgileri</li>
+            <li>Oturum kayıtları</li>
+            <li>Güvenlik log kayıtları</li>
+          </ul>
+
+          <h4>Finansal Bilgiler</h4>
+          <p>
+            Ödeme işlemleri sırasında kullanılan kredi kartı bilgileri
+            <strong>Ticket-Go sistemlerinde saklanmamaktadır.</strong>
+          </p>
+          <p>
+            Ödeme işlemleri, PCI-DSS standartlarına uygun lisanslı ödeme kuruluşları
+            (örneğin iyzico veya benzeri yetkili ödeme hizmet sağlayıcıları) aracılığıyla
+            güvenli şekilde gerçekleştirilmektedir.
+          </p>
+          <p>Ticket-Go yalnızca;</p>
+          <ul>
+            <li>ödeme referans numarası,</li>
+            <li>işlem durumu,</li>
+            <li>ödeme tutarı,</li>
+            <li>ödeme tarihi,</li>
+            <li>ödeme sağlayıcısı işlem referansı</li>
+          </ul>
+          <p>gibi finansal işlem kayıtlarını saklayabilir.</p>
+
+          <h3>3. Kişisel Verilerin İşlenme Amaçları</h3>
+          <p>Toplanan kişisel verileriniz aşağıdaki amaçlarla işlenmektedir:</p>
+          <ul>
+            <li>Feribot ve deniz ulaşımı rezervasyonlarının oluşturulması</li>
+            <li>Elektronik bilet düzenlenmesi</li>
+            <li>Yolcu kayıtlarının oluşturulması</li>
+            <li>Rezervasyonların yönetilmesi</li>
+            <li>Bilet iptal ve değişiklik işlemlerinin gerçekleştirilmesi</li>
+            <li>Ek hizmetlerin sunulması</li>
+            <li>Müşteri destek süreçlerinin yürütülmesi</li>
+            <li>Fatura ve muhasebe işlemlerinin yerine getirilmesi</li>
+            <li>Ödeme işlemlerinin doğrulanması</li>
+            <li>Dolandırıcılık ve kötüye kullanımın önlenmesi</li>
+            <li>Bilgi güvenliği süreçlerinin yürütülmesi</li>
+            <li>Mevzuattan doğan yükümlülüklerin yerine getirilmesi</li>
+            <li>Yetkili kamu kurum ve kuruluşlarının taleplerinin karşılanması</li>
+            <li>Açık rızanız bulunması halinde kampanya ve bilgilendirme gönderilmesi</li>
+          </ul>
+
+          <h3>4. Kişisel Verilerin Aktarılması</h3>
+          <p>
+            Kişisel verileriniz, hizmetlerin yerine getirilebilmesi amacıyla KVKK’nın
+            8. ve 9. maddelerine uygun olarak aşağıdaki kişi ve kuruluşlarla paylaşılabilir:
+          </p>
+          <ul>
+            <li>Feribot işletmeleri</li>
+            <li>Deniz ulaşım hizmet sağlayıcıları</li>
+            <li>Yetkili biletleme sistemleri</li>
+            <li>Lisanslı ödeme kuruluşları</li>
+            <li>Muhasebe ve mali müşavirlik hizmet sağlayıcıları</li>
+            <li>E-fatura ve e-arşiv hizmet sağlayıcıları</li>
+            <li>SMS hizmet sağlayıcıları</li>
+            <li>E-posta hizmet sağlayıcıları</li>
+            <li>Teknik altyapı hizmet sağlayıcıları</li>
+            <li>Kanunen yetkili kamu kurum ve kuruluşları</li>
+            <li>Mahkemeler ve diğer yetkili resmi merciler</li>
+          </ul>
+          <p>
+            Şirket, kişisel verilerinizi ilgili mevzuata aykırı olarak üçüncü kişilerle
+            paylaşmaz.
+          </p>
+
+          <h3>5. Kişisel Verilerin Toplanma Yöntemi ve Hukuki Sebebi</h3>
+          <p>Kişisel verileriniz;</p>
+          <ul>
+            <li>Ticket-Go web sitesi,</li>
+            <li>Ticket-Go mobil uygulamaları,</li>
+            <li>B2B Acente Paneli,</li>
+            <li>çağrı merkezi,</li>
+            <li>müşteri destek kanalları,</li>
+            <li>elektronik iletişim kanalları</li>
+          </ul>
+          <p>aracılığıyla elektronik veya fiziki ortamda toplanmaktadır.</p>
+          <p>Verileriniz aşağıdaki hukuki sebeplere dayanılarak işlenmektedir:</p>
+          <ul>
+            <li>Bir sözleşmenin kurulması veya ifası</li>
+            <li>Kanuni yükümlülüklerin yerine getirilmesi</li>
+            <li>Veri sorumlusunun meşru menfaatleri</li>
+            <li>Bir hakkın tesisi, kullanılması veya korunması</li>
+            <li>Açık rıza gereken durumlarda açık rızanız</li>
+          </ul>
+
+          <h3>6. Çerez (Cookie) Kullanımı</h3>
+          <p>
+            Ticket-Go web sitesi, kullanıcı deneyimini geliştirmek, güvenliği sağlamak
+            ve teknik performansı artırmak amacıyla çerezlerden yararlanabilir.
+          </p>
+          <p>Kullanılabilecek çerez türleri:</p>
+          <ul>
+            <li>Zorunlu çerezler</li>
+            <li>Performans çerezleri</li>
+            <li>Tercih çerezleri</li>
+            <li>Güvenlik çerezleri</li>
+          </ul>
+          <p>
+            Reklam veya pazarlama amaçlı çerezler yalnızca yürürlükteki mevzuata uygun
+            şekilde kullanılacaktır.
+          </p>
+          <p>
+            Tarayıcı ayarlarınız üzerinden çerez tercihlerinizi dilediğiniz zaman
+            değiştirebilirsiniz.
+          </p>
+
+          <h3>7. Kişisel Verilerin Saklanması ve Güvenliği</h3>
+          <p>Şirket;</p>
+          <ul>
+            <li>teknik ve idari güvenlik tedbirlerini uygulamayı,</li>
+            <li>yetkisiz erişimleri önlemeyi,</li>
+            <li>veri bütünlüğünü korumayı,</li>
+            <li>erişim kayıtlarını tutmayı,</li>
+            <li>bilgi güvenliği süreçlerini sürekli geliştirmeyi</li>
+          </ul>
+          <p>amaçlamaktadır.</p>
+          <p>
+            Kişisel veriler yalnızca ilgili mevzuatta öngörülen süre boyunca saklanır
+            ve sürenin sonunda silinir, yok edilir veya anonim hale getirilir.
+          </p>
+
+          <h3>8. İlgili Kişinin Hakları (KVKK Madde 11)</h3>
+          <p>
+            KVKK’nın 11. maddesi kapsamında herkes veri sorumlusuna başvurarak;
+          </p>
+          <ul>
+            <li>Kişisel veri işlenip işlenmediğini öğrenme,</li>
+            <li>İşlenmişse buna ilişkin bilgi talep etme,</li>
+            <li>İşlenme amacını öğrenme,</li>
+            <li>Aktarıldığı üçüncü kişileri öğrenme,</li>
+            <li>Eksik veya yanlış işlenen verilerin düzeltilmesini isteme,</li>
+            <li>Kişisel verilerin silinmesini veya yok edilmesini isteme,</li>
+            <li>Yapılan işlemlerin üçüncü kişilere bildirilmesini isteme,</li>
+            <li>Otomatik sistemlerle analiz sonucu ortaya çıkan aleyhe sonuçlara itiraz etme,</li>
+            <li>Kanuna aykırı işleme nedeniyle uğranılan zararın giderilmesini talep etme</li>
+          </ul>
+          <p>haklarına sahiptir.</p>
+
+          <h3>9. Başvuru Yöntemi</h3>
+          <p>
+            KVKK kapsamındaki taleplerinizi aşağıdaki iletişim kanalları üzerinden
+            iletebilirsiniz.
+          </p>
+          <ul>
+            <li><strong>Veri Sorumlusu:</strong> Turbudur Turizm Şey Ltd. Şti.</li>
+            <li><strong>Adres:</strong> Cevat Şakir Mah. Asbat Sk. No: 1 Bodrum / Muğla</li>
+            <li><strong>Telefon:</strong> <a href="tel:+905473195005">0547 319 50 05</a></li>
+            <li><strong>E-posta:</strong> <a href="mailto:kvkk@ticket-go.net">kvkk@ticket-go.net</a></li>
+          </ul>
+          <p>
+            Başvurularınız, KVKK ve ilgili mevzuatta belirtilen süreler içerisinde
+            değerlendirilerek sonuçlandırılacaktır.
+          </p>
+
+          <h3>10. Politika Güncellemeleri</h3>
+          <p>
+            Ticket-Go, işbu Gizlilik ve Kişisel Verilerin Korunması Politikası’nı
+            yürürlükteki mevzuat veya hizmet süreçlerinde meydana gelebilecek
+            değişiklikler doğrultusunda güncelleyebilir.
+          </p>
+          <p>
+            Güncel sürüm her zaman
+            <a href="https://ticket-go.net" rel="noopener noreferrer">https://ticket-go.net</a>
+            adresinde yayımlanacaktır.
+          </p>
+
+          <p class="legal-meta">
+            <strong>Son Güncelleme Tarihi:</strong> 01.08.2026<br />
+            <strong>Web Sitesi:</strong>
+            <a href="https://ticket-go.net" rel="noopener noreferrer">https://ticket-go.net</a><br />
+            <strong>Genel E-posta:</strong>
+            <a href="mailto:info@ticket-go.net">info@ticket-go.net</a><br />
+            <strong>KVKK Başvuru E-postası:</strong>
+            <a href="mailto:kvkk@ticket-go.net">kvkk@ticket-go.net</a><br />
+            <strong>Telefon:</strong>
+            <a href="tel:+905473195005">0547 319 50 05</a>
+          </p>
+        </article>
+
+        <article class="info-panel legal" id="kvkk" data-title="KVKK Aydınlatma Metni" hidden>
+          <h3>Veri Sorumlusu</h3>
+          <p>KVKK uyarınca veri sorumlusu:</p>
+          <ul>
+            <li><strong>Unvan:</strong> Turbudur Turizm Şey Ltd. Şti.</li>
+            <li><strong>Adres:</strong> Cevat Şakir Mah. Asbat Sk. No: 1 Bodrum / Muğla</li>
+            <li><strong>Vergi numarası:</strong> 8690469168</li>
+            <li><strong>MERSİS numarası:</strong> 0869046916800001</li>
+            <li>
+              <strong>KEP adresi:</strong>
+              <a href="mailto:turbudurturizm@hs01.kep.tr">turbudurturizm@hs01.kep.tr</a>
+            </li>
+            <li>
+              <strong>KVKK iletişim:</strong>
+              <a href="mailto:kvkk@ticket-go.net">kvkk@ticket-go.net</a>
+            </li>
+          </ul>
+
+          <h3>Kişisel Verilerin İşlenme Amaçları</h3>
+          <p>
+            Bu tanıtım sitesi üyelik, ödeme veya form yoluyla kişisel veri toplamaz.
+            Web sunucusu tarafından otomatik oluşan teknik erişim kayıtları; bilgi
+            güvenliği, sistem sürekliliği ve yasal yükümlülüklerin yerine getirilmesi
+            amaçlarıyla sınırlı olarak işlenebilir.
+          </p>
+
+          <h3>İşlenen Veri Kategorileri</h3>
+          <p>Bu site kapsamında doğrudan toplanan kimlik, iletişim veya ödeme verisi yoktur.</p>
+          <p>Teknik / işlem güvenliği kapsamında geçici olarak işlenebilecek veriler:</p>
+          <ul>
+            <li>IP adresi</li>
+            <li>Tarayıcı / cihaz bilgisi</li>
+            <li>Erişim zamanı ve talep edilen sayfa bilgisi</li>
+            <li>Güvenlik log kayıtları</li>
+          </ul>
+
+          <h3>Hukuki Sebepler</h3>
+          <p>
+            Teknik log verileri, KVKK’nın 5. maddesi kapsamında; veri sorumlusunun meşru
+            menfaati, hukuki yükümlülüklerin yerine getirilmesi ve bir hakkın tesisi,
+            kullanılması veya korunması için veri işlemenin zorunlu olması hukuki
+            sebeplerine dayanılarak işlenebilir.
+          </p>
+
+          <h3>Aktarım</h3>
+          <p>
+            Bu tanıtım sitesi üzerinden toplanan üyelik veya form verisi olmadığından
+            bu tür verilerin yurt içi veya yurt dışı aktarımı söz konusu değildir.
+            Barındırma / güvenlik altyapısı kapsamında teknik loglar, hizmetin sunulması
+            için gerekli ölçüde ve KVKK’ya uygun şekilde işlenebilir.
+          </p>
+
+          <h3>Saklama ve Güvenlik</h3>
+          <p>
+            Teknik loglar, işleme amacının gerektirdiği süreyle ve yürürlükteki mevzuata
+            uygun olarak saklanır. Yetkisiz erişim, kayıp veya değiştirilmeye karşı
+            makul güvenlik tedbirlerinin uygulanması hedeflenir.
+          </p>
+
+          <h3>İlgili Kişinin Hakları</h3>
+          <p>KVKK’nın 11. maddesi uyarınca ilgili kişi olarak:</p>
+          <ul>
+            <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+            <li>İşlenmişse buna ilişkin bilgi talep etme</li>
+            <li>İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme</li>
+            <li>Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme</li>
+            <li>Eksik veya yanlış işlenmişse düzeltilmesini isteme</li>
+            <li>KVKK’da öngörülen şartlar çerçevesinde silinmesini veya yok edilmesini isteme</li>
+            <li>İşlemenin kanuna aykırı olması halinde zararın giderilmesini talep etme</li>
+          </ul>
+          <p>haklarına sahipsiniz.</p>
+
+          <h3>Başvuru Yöntemi</h3>
+          <p>
+            KVKK kapsamındaki taleplerinizi
+            <a href="mailto:kvkk@ticket-go.net">kvkk@ticket-go.net</a>
+            adresine veya şirketin kayıtlı adresine yazılı olarak iletebilirsiniz.
+          </p>
+          <p>
+            Başvurularda kimlik doğrulaması için gerekli bilgiler ve talebinizin açık
+            bir şekilde belirtilmesi önerilir. Yanıtlar, KVKK ve ilgili mevzuatta öngörülen
+            süreler içinde değerlendirilir.
+          </p>
+        </article>
+
+        <article class="info-panel" id="iletisim" data-title="İletişim" hidden>
+          <div class="contact-grid">
+            <article class="contact-card">
+              <h3>Şirket</h3>
+              <p>Turbudur Turizm Şey Ltd. Şti.</p>
+            </article>
+            <article class="contact-card">
+              <h3>Adres</h3>
+              <p>Cevat Şakir Mah. Asbat Sk. No: 1 Bodrum / Muğla</p>
+            </article>
+            <article class="contact-card">
+              <h3>Telefon</h3>
+              <p><a href="tel:+905473195005">0547 319 50 05</a></p>
+            </article>
+            <article class="contact-card">
+              <h3>E-posta</h3>
+              <p>
+                <a href="mailto:info@ticket-go.net">info@ticket-go.net</a><br />
+                <a href="mailto:destek@ticket-go.net">destek@ticket-go.net</a>
+              </p>
+            </article>
+            <article class="contact-card">
+              <h3>KVKK Başvuru E-postası</h3>
+              <p><a href="mailto:kvkk@ticket-go.net">kvkk@ticket-go.net</a></p>
+            </article>
+            <article class="contact-card">
+              <h3>Çalışma Saatleri</h3>
+              <p>Pazartesi–Cuma, 09:00–18:00<br />Cumartesi, 09:00–12:00</p>
+            </article>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+
+  <main id="ana-icerik">
+    <!-- Hero: tek sabit alan + kullanıcı kontrollü yatay carousel -->
+    <section class="hero" id="anasayfa" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true">
+        <div class="hero-track" id="hero-track">
+          <figure class="hero-slide is-active">
+            <img src="assets/images/slides/slide-1.jpg" alt="" width="1600" height="1066" fetchpriority="high" decoding="async" />
+          </figure>
+          <figure class="hero-slide">
+            <img src="assets/images/slides/slide-2.jpg" alt="" width="1600" height="1066" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="hero-slide">
+            <img src="assets/images/slides/slide-3.jpg" alt="" width="1600" height="1066" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="hero-slide">
+            <img src="assets/images/slides/slide-4.jpg" alt="" width="1600" height="1066" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="hero-slide">
+            <img src="assets/images/slides/slide-5.jpg" alt="" width="1600" height="1066" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="hero-slide">
+            <img src="assets/images/slides/slide-6.jpg" alt="" width="1600" height="1066" loading="lazy" decoding="async" />
+          </figure>
+        </div>
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container hero-content">
+        <p class="eyebrow">Turbudur Turizm Şey Ltd. Şti.</p>
+        <h1 id="hero-title">Deniz Ulaşımında Güvenilir Teknoloji Altyapısı</h1>
+        <p class="hero-lead">
+          Ticket-Go; feribot biletleme, rezervasyon ve operasyon süreçlerini
+          güvenli, hızlı ve merkezi bir platformda birleştirir.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#iletisim" data-panel="iletisim">İletişim</a>
+          <a class="btn btn-ghost" href="#hakkimizda" data-panel="hakkimizda">Hakkımızda</a>
+        </div>
+        <div class="hero-controls">
+          <button type="button" class="hero-nav-btn" id="hero-prev" aria-label="Önceki görsel">‹</button>
+          <div class="hero-dots" id="hero-dots" role="tablist" aria-label="Hero görselleri"></div>
+          <button type="button" class="hero-nav-btn" id="hero-next" aria-label="Sonraki görsel">›</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand-block">
+        <img class="footer-logo" src="assets/images/logo.png" alt="Ticket-Go" width="120" height="88" loading="lazy" decoding="async" />
+        <p>Deniz ulaşımında güvenli ve merkezi teknoloji çözümleri.</p>
+        <p class="footer-copy">© <span id="footer-year">2026</span> Ticket-Go. Tüm hakları saklıdır.</p>
+      </div>
+      <nav class="footer-col" aria-label="Kurumsal bağlantılar">
+        <h3>Kurumsal</h3>
+        <button type="button" class="footer-link-btn" data-panel="hakkimizda">Hakkımızda</button>
+        <button type="button" class="footer-link-btn" data-panel="iletisim">İletişim</button>
+      </nav>
+      <nav class="footer-col" aria-label="Yasal bağlantılar">
+        <h3>Yasal</h3>
+        <button type="button" class="footer-link-btn" data-panel="gizlilik">Gizlilik Politikası</button>
+        <button type="button" class="footer-link-btn" data-panel="kvkk">KVKK Aydınlatma</button>
+        <button type="button" class="footer-link-btn" data-panel="hakkimizda">Kurumsal Detay</button>
+      </nav>
+      <div class="footer-col">
+        <h3>İletişim</h3>
+        <a href="tel:+905473195005">0547 319 50 05</a>
+        <a href="mailto:info@ticket-go.net">info@ticket-go.net</a>
+        <a href="https://ticket-go.net" rel="noopener noreferrer">ticket-go.net</a>
+      </div>
+    </div>
+  </footer>
+
+  <noscript>
+    <style>
+      .info-shell[hidden] { display: block !important; position: static; }
+      .info-backdrop { display: none !important; }
+      .info-card { position: static; max-height: none; margin: 1rem; }
+      .info-panel[hidden] { display: block !important; margin-bottom: 2rem; }
+      .info-close { display: none !important; }
+    </style>
+  </noscript>
+
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>
