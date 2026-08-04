@@ -17,7 +17,7 @@
   --shadow: 0 8px 24px rgba(7, 20, 39, 0.08);
   --shadow-hover: 0 12px 28px rgba(7, 20, 39, 0.12);
   --radius: 12px;
-  --header-h: 96px;
+  --header-h: 108px;
   --max: 1140px;
   --legal-max: 720px;
   --font: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
@@ -110,7 +110,7 @@ button:focus-visible {
   position: sticky;
   top: 0;
   z-index: 200;
-  overflow: hidden;
+  overflow: visible;
   background: var(--navy-950);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -125,27 +125,102 @@ button:focus-visible {
   gap: 1rem;
 }
 
-.brand {
-  display: flex;
+/* Premium 3D marka logosu — mevcut PNG + kontrollü derinlik */
+.brand.brand-logo {
+  display: inline-flex;
   align-items: center;
+  gap: 0.65rem;
   text-decoration: none;
-  min-width: 0;
+  color: inherit;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.2rem 0.3rem;
+  border-radius: 10px;
   flex-shrink: 0;
   position: relative;
   z-index: 2;
+  perspective: 820px;
+  transform-style: preserve-3d;
 }
 
-.brand-logo {
+.brand.brand-logo:hover {
+  color: inherit;
+}
+
+.brand.brand-logo:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 4px;
+}
+
+.brand-logo__mark {
+  position: relative;
+  display: grid;
+  place-items: center;
+  transform: rotateY(-10deg) rotateX(5deg) translateZ(0);
+  transform-origin: 50% 55%;
+  transform-style: preserve-3d;
+  transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1), filter 220ms ease;
+  filter:
+    drop-shadow(0 1px 0 rgba(255, 255, 255, 0.28))
+    drop-shadow(0 10px 14px rgba(0, 0, 0, 0.42))
+    drop-shadow(0 3px 4px rgba(0, 0, 0, 0.3));
+}
+
+.brand-logo__mark::before {
+  content: "";
+  position: absolute;
+  inset: 8% 12% 38% 12%;
+  border-radius: 42% 42% 48% 48%;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.42) 0%,
+    rgba(201, 146, 20, 0.12) 28%,
+    rgba(255, 255, 255, 0) 58%
+  );
+  pointer-events: none;
+  z-index: 2;
+  transform: translateZ(12px);
+  mix-blend-mode: soft-light;
+}
+
+.brand-logo__mark::after {
+  content: "";
+  position: absolute;
+  left: 16%;
+  right: 16%;
+  bottom: 4%;
+  height: 16%;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.42) 0%,
+    rgba(0, 0, 0, 0) 72%
+  );
+  pointer-events: none;
+  z-index: 0;
+  transform: translateZ(-12px) scaleY(0.55);
+  filter: blur(1.5px);
+}
+
+.brand-logo__img {
+  position: relative;
+  z-index: 1;
   display: block;
-  height: 76px;
+  height: 94px;
   width: auto;
-  max-width: min(180px, 42vw);
+  max-width: min(250px, 56vw);
   aspect-ratio: 140 / 103;
   object-fit: contain;
+  transform: translateZ(4px);
+  filter: contrast(1.05) saturate(1.06) brightness(1.03);
+}
+
+.brand.brand-logo:hover .brand-logo__mark {
+  transform: rotateY(0deg) rotateX(0deg) translateY(-1px);
   filter:
-    drop-shadow(0 0 6px rgba(255, 255, 255, 0.9))
-    drop-shadow(0 0 14px rgba(255, 255, 255, 0.5))
-    drop-shadow(0 2px 4px rgba(255, 255, 255, 0.4));
+    drop-shadow(0 1px 0 rgba(255, 255, 255, 0.26))
+    drop-shadow(0 10px 16px rgba(0, 0, 0, 0.42))
+    drop-shadow(0 3px 4px rgba(0, 0, 0, 0.24));
 }
 
 .site-nav {
@@ -800,13 +875,25 @@ button:focus-visible {
 
 }
 
+@media (max-width: 900px) {
+  .brand-logo__img {
+    height: 84px;
+    max-width: min(230px, 54vw);
+  }
+}
+
 @media (max-width: 768px) {
   :root {
-    --header-h: 84px;
+    --header-h: 100px;
   }
 
-  .brand-logo {
-    height: 64px;
+  .brand-logo__img {
+    height: 76px;
+    max-width: min(210px, 58vw);
+  }
+
+  .brand-logo__mark {
+    transform: rotateY(-4deg) rotateX(2deg);
   }
 
   .nav-toggle {
@@ -918,4 +1005,17 @@ button:focus-visible {
     box-shadow: none;
   }
 
+  .brand-logo__mark,
+  .brand.brand-logo:hover .brand-logo__mark {
+    transition: none;
+    transform: none;
+    filter:
+      drop-shadow(0 1px 0 rgba(255, 255, 255, 0.18))
+      drop-shadow(0 4px 8px rgba(0, 0, 0, 0.32));
+  }
+
+  .brand-logo__mark::before {
+    opacity: 0.55;
+  }
 }
+

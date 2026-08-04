@@ -99,7 +99,7 @@ Detay: `.env.example`
 
 ## Sayfa akışı
 
-1. Sticky header — sabit logo (beyaz gölge), menü, İletişim (yeşil nabız)
+1. Sticky header — premium 3D logo, menü, İletişim (yeşil nabız)
 2. Hero — kurumsal başlık + yatay görsel geçişi (otomatik + nokta/ok kontrol)
 3. Footer — logo, kurumsal / yasal / iletişim
 
@@ -123,15 +123,14 @@ Yayın öncesi:
 2. `robots.txt` / `sitemap.xml` / canonical (`https://ticket-go.net/`) doğrulaması
 3. Gizlilik ve KVKK metinlerinin hukuki kontrolü
 
-### GitHub’a yükleme (uzak repo oluşturduktan sonra)
+### GitHub’a yükleme
 
 ```bash
 cd "/Users/ticket-go/Desktop/ticket-go.net web sitesi arayüz github"
-git remote add origin https://github.com/KULLANICI_ADI/REPO_ADI.git
 git push -u origin main
 ```
 
-`KULLANICI_ADI` ve `REPO_ADI` değerlerini kendi GitHub bilginizle değiştirin.
+Uzak depo: `https://github.com/admin-ticket-go/ticket-go-website.git`
 
 ## Lisans
 
