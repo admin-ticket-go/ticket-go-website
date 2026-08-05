@@ -1,16 +1,18 @@
 /**
  * Ticket-Go kurumsal site
- * - Sticky menü / mobil menü
- * - Kullanıcı kontrollü yatay hero carousel
- * - Yasal metin bilgi kartları
- * - Footer yılı
- * API / storage / cookie yok
+ * - Sticky header (scroll → koyu zemin)
+ * - Hero carousel
+ * - Ana sayfa içerik render (site-content.js)
+ * - Yasal / kurumsal bilgi kartları
+ * - Sefer/bilet arama yok (tanıtım yüzü)
+ * fetch / storage / cookie yok
  */
 (function () {
   "use strict";
 
   var nav = document.getElementById("site-nav");
   var toggle = document.getElementById("nav-toggle");
+  var header = document.getElementById("site-header");
   var yearEl = document.getElementById("footer-year");
   var shell = document.getElementById("info-shell");
   var card = document.getElementById("info-card");
@@ -27,13 +29,19 @@
     toggle.setAttribute("aria-label", open ? "Menüyü kapat" : "Menüyü aç");
   }
 
+  function updateHeaderScroll() {
+    if (!header) return;
+    var y = window.scrollY || window.pageYOffset;
+    header.classList.toggle("is-scrolled", y > 24);
+  }
+
   function setActiveNav() {
     var links = document.querySelectorAll(".site-nav .nav-link");
     var sections = document.querySelectorAll("main section[id]");
     var y = window.scrollY || window.pageYOffset;
     var current = "anasayfa";
     sections.forEach(function (section) {
-      if (section.offsetTop - 100 <= y) {
+      if (section.offsetTop - 90 <= y) {
         current = section.id;
       }
     });
@@ -84,6 +92,145 @@
       var body = document.getElementById("info-card-body");
       if (body) body.scrollTop = 0;
     });
+  }
+
+  function escapeHtml(str) {
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  var BENEFIT_ICONS = {
+    payment:
+      '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+      '<rect x="2" y="5" width="20" height="14" rx="2"/>' +
+      '<path d="M2 10h20"/>' +
+      '<path d="M6 15h4"/>' +
+      '<path d="M16 14.5v1"/>' +
+      "</svg>",
+    ticket:
+      '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+      '<path d="M4 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1a2 2 0 0 0 0 4v1a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-1a2 2 0 0 0 0-4V8z"/>' +
+      '<path d="M12 6v12"/>' +
+      "</svg>",
+    ops:
+      '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+      '<circle cx="12" cy="12" r="2.5"/>' +
+      '<circle cx="5" cy="6" r="1.75"/>' +
+      '<circle cx="19" cy="6" r="1.75"/>' +
+      '<circle cx="5" cy="18" r="1.75"/>' +
+      '<circle cx="19" cy="18" r="1.75"/>' +
+      '<path d="M6.5 7.2 10.2 10.5M17.5 7.2 13.8 10.5M6.5 16.8 10.2 13.5M17.5 16.8 13.8 13.5"/>' +
+      "</svg>",
+    notify:
+      '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+      '<path d="M12 3a5 5 0 0 0-5 5v2.2c0 .7-.2 1.4-.6 2L5 14h14l-1.4-1.8c-.4-.6-.6-1.3-.6-2V8a5 5 0 0 0-5-5z"/>' +
+      '<path d="M10 18a2 2 0 0 0 4 0"/>' +
+      "</svg>",
+    support:
+      '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+      '<path d="M4 12a8 8 0 0 1 16 0"/>' +
+      '<path d="M4 12v3a2 2 0 0 0 2 2h1v-5H6a2 2 0 0 0-2 2z"/>' +
+      '<path d="M20 12v3a2 2 0 0 1-2 2h-1v-5h1a2 2 0 0 1 2 2z"/>' +
+      '<path d="M14 19h-2a2 2 0 0 1-2-2v-1"/>' +
+      "</svg>",
+    scale:
+      '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+      '<path d="M4 18V9"/>' +
+      '<path d="M10 18V6"/>' +
+      '<path d="M16 18v-7"/>' +
+      '<path d="M20 18V4"/>' +
+      '<path d="M3 20h18"/>' +
+      "</svg>",
+  };
+
+  function renderHome() {
+    var data = window.TG_HOME;
+    if (!data) return;
+
+    if (data.hero) {
+      var eyebrow = document.getElementById("hero-eyebrow");
+      var title = document.getElementById("hero-title");
+      var lead = document.getElementById("hero-lead");
+      if (eyebrow && data.hero.eyebrow) eyebrow.textContent = data.hero.eyebrow;
+      if (title && data.hero.title) title.textContent = data.hero.title;
+      if (lead && data.hero.lead) lead.textContent = data.hero.lead;
+    }
+
+    var benefitStrip = document.getElementById("benefit-strip");
+    if (benefitStrip && data.benefits) {
+      benefitStrip.innerHTML = data.benefits
+        .map(function (b) {
+          var iconSvg = BENEFIT_ICONS[b.icon] || BENEFIT_ICONS.ops;
+          return (
+            '<article class="benefit-item">' +
+            '<span class="benefit-icon" aria-hidden="true">' +
+            iconSvg +
+            "</span>" +
+            "<div><strong>" +
+            escapeHtml(b.title) +
+            "</strong><span>" +
+            escapeHtml(b.desc) +
+            "</span></div></article>"
+          );
+        })
+        .join("");
+    }
+
+    var techGrid = document.getElementById("tech-grid");
+    if (techGrid && data.tech) {
+      techGrid.innerHTML = data.tech
+        .map(function (t) {
+          return (
+            '<article class="tech-card"><h3>' +
+            escapeHtml(t.title) +
+            "</h3><p>" +
+            escapeHtml(t.desc) +
+            "</p></article>"
+          );
+        })
+        .join("");
+    }
+
+    var partnerGrid = document.getElementById("partner-grid");
+    if (partnerGrid && data.partners) {
+      partnerGrid.innerHTML = data.partners
+        .map(function (p) {
+          return '<div class="partner-chip" role="listitem">' + escapeHtml(p) + "</div>";
+        })
+        .join("");
+    }
+
+    var reviewGrid = document.getElementById("review-grid");
+    if (reviewGrid && data.reviews) {
+      reviewGrid.innerHTML = data.reviews
+        .map(function (r) {
+          return (
+            '<article class="review-card">' +
+            "<blockquote>“" +
+            escapeHtml(r.quote) +
+            "”</blockquote>" +
+            "<footer><strong>" +
+            escapeHtml(r.name) +
+            "</strong><span>" +
+            escapeHtml(r.role) +
+            "</span></footer></article>"
+          );
+        })
+        .join("");
+    }
+
+    if (data.cta) {
+      var ctaTitle = document.getElementById("cta-title");
+      var ctaBtn = document.getElementById("cta-contact-btn");
+      if (ctaTitle && data.cta.title) ctaTitle.textContent = data.cta.title;
+      if (ctaBtn && data.cta.button) ctaBtn.textContent = data.cta.button;
+    }
+
+    var blurb = document.getElementById("footer-blurb");
+    if (blurb && data.footerBlurb) blurb.textContent = data.footerBlurb;
   }
 
   document.addEventListener("click", function (event) {
@@ -139,23 +286,36 @@
   });
 
   window.addEventListener("resize", function () {
-    if (window.innerWidth > 768) setMenuOpen(false);
+    if (window.innerWidth > 900) setMenuOpen(false);
   });
 
-  window.addEventListener("scroll", setActiveNav, { passive: true });
+  window.addEventListener(
+    "scroll",
+    function () {
+      updateHeaderScroll();
+      setActiveNav();
+    },
+    { passive: true }
+  );
+  updateHeaderScroll();
   setActiveNav();
 
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
   }
 
-  // Hash ile doğrudan panel
+  renderHome();
+
   var initial = (location.hash || "").replace(/^#/, "");
-  if (initial && /^[a-z0-9-]+$/i.test(initial) && document.getElementById(initial) && document.getElementById(initial).classList.contains("info-panel")) {
+  if (
+    initial &&
+    /^[a-z0-9-]+$/i.test(initial) &&
+    document.getElementById(initial) &&
+    document.getElementById(initial).classList.contains("info-panel")
+  ) {
     openPanel(initial, null);
   }
 
-  /* Otomatik hero slideshow — crossfade + Ken Burns */
   (function initHeroCarousel() {
     var slides = document.querySelectorAll(".hero-slide");
     var dotsWrap = document.getElementById("hero-dots");
@@ -210,10 +370,13 @@
       leaving.classList.add("is-leaving");
       entering.classList.add("is-active");
 
-      window.setTimeout(function () {
-        leaving.classList.remove("is-leaving");
-        transitioning = false;
-      }, reduceMotion ? 80 : 1200);
+      window.setTimeout(
+        function () {
+          leaving.classList.remove("is-leaving");
+          transitioning = false;
+        },
+        reduceMotion ? 80 : 1200
+      );
 
       index = target;
       setDots(index);

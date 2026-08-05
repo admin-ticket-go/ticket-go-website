@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="index, follow" />
-  <title>Ticket-Go | Deniz Ulaşımında Güvenilir Teknoloji</title>
+  <title>Ticket-Go | Deniz Yolculuğunun Dijital Bilet Platformu</title>
   <meta
     name="description"
-    content="Ticket-Go; feribot biletleme, rezervasyon ve deniz ulaşımı operasyonları için merkezi teknoloji altyapısı. Turbudur Turizm Şey Ltd. Şti."
+    content="Ticket-Go; deniz ulaşımı ve feribot biletleme için teknoloji odaklı kurumsal platform. ticketgo.net Teknoloji A.Ş."
   />
   <link rel="canonical" href="https://ticket-go.net/" />
   <meta property="og:type" content="website" />
@@ -19,34 +19,72 @@
   <meta property="og:url" content="https://ticket-go.net/" />
   <meta property="og:image" content="https://ticket-go.net/assets/images/slides/slide-1.jpg" />
   <meta property="og:locale" content="tr_TR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ticket-Go | Deniz Ulaşımında Güvenilir Teknoloji" />
+  <meta
+    name="twitter:description"
+    content="Feribot biletleme ve deniz ulaşımı için güvenli, merkezi teknoloji platformu."
+  />
+  <meta name="twitter:image" content="https://ticket-go.net/assets/images/slides/slide-1.jpg" />
   <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="icon" href="assets/images/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="assets/images/logo-mark.png" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "ticketgo.net Teknoloji A.Ş.",
+        "alternateName": "Ticket-Go",
+        "url": "https://ticket-go.net/",
+        "logo": "https://ticket-go.net/assets/images/logo.png",
+        "email": "info@ticket-go.net",
+        "telephone": "+90-547-319-50-05",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Cevat Şakir Mah. Asbat Sk. No: 1",
+          "addressLocality": "Bodrum",
+          "addressRegion": "Muğla",
+          "addressCountry": "TR"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "name": "Ticket-Go",
+        "url": "https://ticket-go.net/",
+        "inLanguage": "tr-TR",
+        "publisher": { "@type": "Organization", "name": "ticketgo.net Teknoloji A.Ş." }
+      },
+      {
+        "@type": "Service",
+        "name": "Feribot biletleme ve rezervasyon altyapısı",
+        "provider": { "@type": "Organization", "name": "ticketgo.net Teknoloji A.Ş." },
+        "areaServed": "TR",
+        "serviceType": "Deniz ulaşımı biletleme teknolojisi"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Ticket-Go Platform",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web, iOS, Android",
+        "description": "Feribot biletleme, B2B acente ve operasyon yönetimi için yazılım platformu"
+      }
+    ]
+  }
+  </script>
 </head>
+
 <body>
   <a class="skip-link" href="#ana-icerik">İçeriğe atla</a>
 
   <header class="site-header" id="site-header">
     <div class="container header-inner">
-      <a
-        class="brand brand-logo"
-        href="#anasayfa"
-        data-home
-        aria-label="Ticket-Go ana sayfa"
-      >
-        <span class="brand-logo__mark" aria-hidden="true">
-          <img
-            class="brand-logo__img"
-            src="assets/images/logo.png"
-            alt=""
-            width="140"
-            height="103"
-            decoding="async"
-          />
-        </span>
-        <span class="visually-hidden">Ticket-Go</span>
+      <a class="brand brand-logo" href="#anasayfa" data-home aria-label="Ticket-Go ana sayfa">
+        <img class="header-logo" src="assets/images/logo.png" alt="Ticket-Go" width="200" height="74" decoding="async" />
       </a>
+
       <button
         class="nav-toggle"
         id="nav-toggle"
@@ -65,12 +103,14 @@
           <li><a class="nav-link" href="#anasayfa" data-home>Ana Sayfa</a></li>
           <li><a class="nav-link" href="#hakkimizda" data-panel="hakkimizda">Hakkımızda</a></li>
           <li><a class="nav-link" href="#gizlilik" data-panel="gizlilik">Gizlilik Sözleşmesi</a></li>
+          <li><a class="nav-link" href="#kvkk" data-panel="kvkk">KVKK</a></li>
+          <li>
+            <a class="btn btn-header nav-link-pulse" href="#iletisim" data-panel="iletisim">İletişim</a>
+          </li>
         </ul>
-        <a class="btn btn-header nav-link-pulse" href="#iletisim" data-panel="iletisim">İletişim</a>
       </nav>
     </div>
   </header>
-
   <!-- Üst bilgi kartı: menü tıklanınca açılır -->
   <div
     class="info-shell"
@@ -88,7 +128,17 @@
       tabindex="-1"
     >
       <div class="info-card-toolbar">
-        <h2 class="info-card-title" id="info-card-title">Bilgi</h2>
+        <div class="info-card-heading">
+          <img
+            class="info-card-logo"
+            src="assets/images/logo.png"
+            alt="Ticket-Go"
+            width="120"
+            height="88"
+            decoding="async"
+          />
+          <h2 class="info-card-title" id="info-card-title">Bilgi</h2>
+        </div>
         <button type="button" class="info-close" id="info-close" aria-label="Kartı kapat">
           ✕
         </button>
@@ -98,19 +148,17 @@
           <div class="content-narrow">
             <p>
               <strong>Ticket-Go</strong>,
-              <strong>Turbudur Turizm Şey Ltd. Şti.</strong> tarafından geliştirilen,
+              <strong>ticketgo.net Teknoloji A.Ş.</strong> tarafından geliştirilen,
               deniz ulaşımı ve feribot biletleme süreçlerini dijital ortamda güvenli,
               hızlı ve merkezi şekilde yönetmek amacıyla oluşturulmuş yeni nesil bir
               teknoloji platformudur.
             </p>
             <p>
-              <strong>Turbudur Turizm Şey Ltd. Şti.</strong>, 2011 yılından bu yana
-              turizm sektöründe güven, kalite ve müşteri memnuniyeti odaklı hizmet
-              anlayışıyla faaliyet göstermektedir. Şirketimiz, T.C. Kültür ve Turizm
-              Bakanlığı tarafından verilen
-              <strong>7057 numaralı A Grubu Seyahat Acentesi İşletme Belgesi</strong>’ne
-              sahiptir ve aynı zamanda
-              <strong>Türkiye Seyahat Acentaları Birliği (TÜRSAB)</strong> üyesidir.
+              <strong>ticketgo.net Teknoloji A.Ş.</strong>, deniz ulaşımı ve feribot
+              biletleme alanında güven, kalite ve müşteri memnuniyeti odaklı teknoloji
+              çözümleri sunar. Platform; yazılım, operasyon ve dijital hizmet altyapısını
+              tek çatı altında birleştirerek sektör paydaşlarına ölçeklenebilir hizmet
+              sağlamayı hedefler.
             </p>
             <p>
               Yıllara dayanan sektör tecrübemiz ve dijital dönüşüm vizyonumuz
@@ -170,14 +218,14 @@
           <p>
             6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) uyarınca kişisel
             verileriniz, veri sorumlusu sıfatıyla
-            <strong>Turbudur Turizm Şey Ltd. Şti.</strong>
+            <strong>ticketgo.net Teknoloji A.Ş.</strong>
             (“Şirket” veya “Ticket-Go”) tarafından aşağıda belirtilen kapsamda
             işlenmektedir.
           </p>
 
           <h4>İletişim Bilgileri</h4>
           <ul>
-            <li><strong>Şirket Ünvanı:</strong> Turbudur Turizm Şey Ltd. Şti.</li>
+            <li><strong>Şirket Ünvanı:</strong> ticketgo.net Teknoloji A.Ş.</li>
             <li><strong>Adres:</strong> Cevat Şakir Mah. Asbat Sk. No: 1 Bodrum / Muğla</li>
             <li><strong>Telefon:</strong> <a href="tel:+905473195005">0547 319 50 05</a></li>
             <li><strong>Web Sitesi:</strong> <a href="https://ticket-go.net" rel="noopener noreferrer">https://ticket-go.net</a></li>
@@ -371,7 +419,7 @@
             iletebilirsiniz.
           </p>
           <ul>
-            <li><strong>Veri Sorumlusu:</strong> Turbudur Turizm Şey Ltd. Şti.</li>
+            <li><strong>Veri Sorumlusu:</strong> ticketgo.net Teknoloji A.Ş.</li>
             <li><strong>Adres:</strong> Cevat Şakir Mah. Asbat Sk. No: 1 Bodrum / Muğla</li>
             <li><strong>Telefon:</strong> <a href="tel:+905473195005">0547 319 50 05</a></li>
             <li><strong>E-posta:</strong> <a href="mailto:kvkk@ticket-go.net">kvkk@ticket-go.net</a></li>
@@ -410,13 +458,13 @@
           <h3>Veri Sorumlusu</h3>
           <p>KVKK uyarınca veri sorumlusu:</p>
           <ul>
-            <li><strong>Unvan:</strong> Turbudur Turizm Şey Ltd. Şti.</li>
+            <li><strong>Unvan:</strong> ticketgo.net Teknoloji A.Ş.</li>
             <li><strong>Adres:</strong> Cevat Şakir Mah. Asbat Sk. No: 1 Bodrum / Muğla</li>
             <li><strong>Vergi numarası:</strong> 8690469168</li>
             <li><strong>MERSİS numarası:</strong> 0869046916800001</li>
             <li>
-              <strong>KEP adresi:</strong>
-              <a href="mailto:turbudurturizm@hs01.kep.tr">turbudurturizm@hs01.kep.tr</a>
+              <strong>Resmi başvuru:</strong>
+              <a href="mailto:kvkk@ticket-go.net">kvkk@ticket-go.net</a>
             </li>
             <li>
               <strong>KVKK iletişim:</strong>
@@ -495,7 +543,7 @@
           <div class="contact-grid">
             <article class="contact-card">
               <h3>Şirket</h3>
-              <p>Turbudur Turizm Şey Ltd. Şti.</p>
+              <p>ticketgo.net Teknoloji A.Ş.</p>
             </article>
             <article class="contact-card">
               <h3>Adres</h3>
@@ -528,7 +576,6 @@
 
 
   <main id="ana-icerik">
-    <!-- Hero: tek sabit alan + kullanıcı kontrollü yatay carousel -->
     <section class="hero" id="anasayfa" aria-labelledby="hero-title">
       <div class="hero-media" aria-hidden="true">
         <div class="hero-track" id="hero-track">
@@ -551,54 +598,279 @@
             <img src="assets/images/slides/slide-6.jpg" alt="" width="1600" height="1066" loading="lazy" decoding="async" />
           </figure>
         </div>
+        <div class="hero-tech-layer" aria-hidden="true"></div>
         <div class="hero-overlay"></div>
       </div>
 
-      <div class="container hero-content">
-        <p class="eyebrow">Turbudur Turizm Şey Ltd. Şti.</p>
-        <h1 id="hero-title">Deniz Ulaşımında Güvenilir Teknoloji Altyapısı</h1>
-        <p class="hero-lead">
-          Ticket-Go; feribot biletleme, rezervasyon ve operasyon süreçlerini
-          güvenli, hızlı ve merkezi bir platformda birleştirir.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#iletisim" data-panel="iletisim">İletişim</a>
-          <a class="btn btn-ghost" href="#hakkimizda" data-panel="hakkimizda">Hakkımızda</a>
-        </div>
-        <div class="hero-controls">
-          <button type="button" class="hero-nav-btn" id="hero-prev" aria-label="Önceki görsel">‹</button>
-          <div class="hero-dots" id="hero-dots" role="tablist" aria-label="Hero görselleri"></div>
-          <button type="button" class="hero-nav-btn" id="hero-next" aria-label="Sonraki görsel">›</button>
+      <div class="container hero-layout hero-layout--showcase">
+        <div class="hero-content">
+          <p class="eyebrow" id="hero-eyebrow">ticketgo.net Teknoloji A.Ş.</p>
+          <h1 id="hero-title">Deniz Ulaşımında Güvenilir Teknoloji</h1>
+          <p class="hero-lead" id="hero-lead">
+            Ticket-Go; feribot biletleme ve deniz ulaşımı operasyonları için geliştirilmiş
+            kurumsal teknoloji platformudur.
+          </p>
+          <div class="hero-controls">
+            <button type="button" class="hero-nav-btn" id="hero-prev" aria-label="Önceki görsel">‹</button>
+            <div class="hero-dots" id="hero-dots" role="tablist" aria-label="Hero görselleri"></div>
+            <button type="button" class="hero-nav-btn" id="hero-next" aria-label="Sonraki görsel">›</button>
+          </div>
         </div>
       </div>
     </section>
 
-  </main>
+    <section class="section section-benefits" id="avantajlar" aria-label="Platform avantajları">
+      <div class="container">
+        <div class="benefit-strip" id="benefit-strip"></div>
+      </div>
+    </section>
 
+    <section class="section section-alt" id="teknoloji" aria-labelledby="tech-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">Teknoloji</p>
+          <h2 id="tech-title">Teknoloji altyapımız</h2>
+          <p class="section-desc">Ödeme, bildirim, mobil deneyim ve operasyon yönetimini birleştiren kurumsal altyapı.</p>
+        </div>
+        <div class="tech-grid" id="tech-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="mobil-bilet" aria-labelledby="mobile-title">
+      <div class="container mobile-ticket">
+        <div class="mobile-ticket__copy">
+          <p class="section-kicker">Ürün</p>
+          <h2 id="mobile-title">Dijital bilet deneyimi</h2>
+          <p class="section-desc">
+            Elektronik bilet, yolcu özeti ve QR doğrulama — mobil odaklı ürün yüzeyi.
+          </p>
+          <ul class="mobile-ticket__list">
+            <li>QR kodlu elektronik bilet</li>
+            <li>Yolcu ve hat özeti</li>
+            <li>SMS / e-posta bildirimi</li>
+          </ul>
+        </div>
+        <div class="phone-mock" aria-hidden="true">
+          <div class="ticket-screen">
+            <p class="ticket-brand">TicketGo</p>
+            <p class="ticket-route">Bodrum → Kos</p>
+            <p class="ticket-meta">Elektronik bilet</p>
+            <div class="qr-block" role="img" aria-label="QR kod">
+              <svg class="qr-fake" viewBox="0 0 29 29" width="128" height="128" xmlns="http://www.w3.org/2000/svg">
+                <rect width="29" height="29" fill="#fff"/>
+                <!-- Finder: sol üst -->
+                <rect x="1" y="1" width="7" height="7" fill="#0b1f33"/>
+                <rect x="2" y="2" width="5" height="5" fill="#fff"/>
+                <rect x="3" y="3" width="3" height="3" fill="#0b1f33"/>
+                <!-- Finder: sağ üst -->
+                <rect x="21" y="1" width="7" height="7" fill="#0b1f33"/>
+                <rect x="22" y="2" width="5" height="5" fill="#fff"/>
+                <rect x="23" y="3" width="3" height="3" fill="#0b1f33"/>
+                <!-- Finder: sol alt -->
+                <rect x="1" y="21" width="7" height="7" fill="#0b1f33"/>
+                <rect x="2" y="22" width="5" height="5" fill="#fff"/>
+                <rect x="3" y="23" width="3" height="3" fill="#0b1f33"/>
+                <!-- Timing -->
+                <rect x="9" y="1" width="1" height="1" fill="#0b1f33"/>
+                <rect x="11" y="1" width="1" height="1" fill="#0b1f33"/>
+                <rect x="13" y="1" width="1" height="1" fill="#0b1f33"/>
+                <rect x="15" y="1" width="1" height="1" fill="#0b1f33"/>
+                <rect x="17" y="1" width="1" height="1" fill="#0b1f33"/>
+                <rect x="19" y="1" width="1" height="1" fill="#0b1f33"/>
+                <rect x="1" y="9" width="1" height="1" fill="#0b1f33"/>
+                <rect x="1" y="11" width="1" height="1" fill="#0b1f33"/>
+                <rect x="1" y="13" width="1" height="1" fill="#0b1f33"/>
+                <rect x="1" y="15" width="1" height="1" fill="#0b1f33"/>
+                <rect x="1" y="17" width="1" height="1" fill="#0b1f33"/>
+                <rect x="1" y="19" width="1" height="1" fill="#0b1f33"/>
+                <!-- Alignment -->
+                <rect x="20" y="20" width="5" height="5" fill="#0b1f33"/>
+                <rect x="21" y="21" width="3" height="3" fill="#fff"/>
+                <rect x="22" y="22" width="1" height="1" fill="#0b1f33"/>
+                <!-- Data modules (fake) -->
+                <rect x="9" y="3" width="1" height="1" fill="#0b1f33"/>
+                <rect x="10" y="3" width="1" height="1" fill="#0b1f33"/>
+                <rect x="12" y="3" width="1" height="1" fill="#0b1f33"/>
+                <rect x="14" y="3" width="1" height="1" fill="#0b1f33"/>
+                <rect x="16" y="3" width="1" height="1" fill="#0b1f33"/>
+                <rect x="18" y="4" width="1" height="1" fill="#0b1f33"/>
+                <rect x="9" y="5" width="1" height="1" fill="#0b1f33"/>
+                <rect x="11" y="5" width="1" height="1" fill="#0b1f33"/>
+                <rect x="13" y="5" width="1" height="1" fill="#0b1f33"/>
+                <rect x="15" y="5" width="1" height="1" fill="#0b1f33"/>
+                <rect x="17" y="5" width="1" height="1" fill="#0b1f33"/>
+                <rect x="19" y="5" width="1" height="1" fill="#0b1f33"/>
+                <rect x="10" y="6" width="1" height="1" fill="#0b1f33"/>
+                <rect x="12" y="6" width="1" height="1" fill="#0b1f33"/>
+                <rect x="14" y="7" width="1" height="1" fill="#0b1f33"/>
+                <rect x="16" y="7" width="1" height="1" fill="#0b1f33"/>
+                <rect x="18" y="7" width="1" height="1" fill="#0b1f33"/>
+                <rect x="9" y="9" width="1" height="1" fill="#0b1f33"/>
+                <rect x="11" y="9" width="1" height="1" fill="#0b1f33"/>
+                <rect x="13" y="9" width="1" height="1" fill="#0b1f33"/>
+                <rect x="15" y="9" width="1" height="1" fill="#0b1f33"/>
+                <rect x="17" y="9" width="1" height="1" fill="#0b1f33"/>
+                <rect x="19" y="9" width="1" height="1" fill="#0b1f33"/>
+                <rect x="21" y="9" width="1" height="1" fill="#0b1f33"/>
+                <rect x="23" y="9" width="1" height="1" fill="#0b1f33"/>
+                <rect x="25" y="9" width="1" height="1" fill="#0b1f33"/>
+                <rect x="27" y="9" width="1" height="1" fill="#0b1f33"/>
+                <rect x="3" y="10" width="1" height="1" fill="#0b1f33"/>
+                <rect x="5" y="10" width="1" height="1" fill="#0b1f33"/>
+                <rect x="7" y="10" width="1" height="1" fill="#0b1f33"/>
+                <rect x="10" y="10" width="1" height="1" fill="#0b1f33"/>
+                <rect x="12" y="10" width="1" height="1" fill="#0b1f33"/>
+                <rect x="14" y="10" width="1" height="1" fill="#0b1f33"/>
+                <rect x="16" y="10" width="1" height="1" fill="#0b1f33"/>
+                <rect x="18" y="10" width="1" height="1" fill="#0b1f33"/>
+                <rect x="20" y="10" width="1" height="1" fill="#0b1f33"/>
+                <rect x="22" y="10" width="1" height="1" fill="#0b1f33"/>
+                <rect x="24" y="10" width="1" height="1" fill="#0b1f33"/>
+                <rect x="26" y="11" width="1" height="1" fill="#0b1f33"/>
+                <rect x="2" y="11" width="1" height="1" fill="#0b1f33"/>
+                <rect x="4" y="11" width="1" height="1" fill="#0b1f33"/>
+                <rect x="6" y="11" width="1" height="1" fill="#0b1f33"/>
+                <rect x="9" y="11" width="1" height="1" fill="#0b1f33"/>
+                <rect x="11" y="11" width="1" height="1" fill="#0b1f33"/>
+                <rect x="13" y="12" width="1" height="1" fill="#0b1f33"/>
+                <rect x="15" y="12" width="1" height="1" fill="#0b1f33"/>
+                <rect x="17" y="12" width="1" height="1" fill="#0b1f33"/>
+                <rect x="19" y="12" width="1" height="1" fill="#0b1f33"/>
+                <rect x="21" y="12" width="1" height="1" fill="#0b1f33"/>
+                <rect x="23" y="12" width="1" height="1" fill="#0b1f33"/>
+                <rect x="25" y="12" width="1" height="1" fill="#0b1f33"/>
+                <rect x="27" y="12" width="1" height="1" fill="#0b1f33"/>
+                <rect x="3" y="13" width="1" height="1" fill="#0b1f33"/>
+                <rect x="5" y="13" width="1" height="1" fill="#0b1f33"/>
+                <rect x="8" y="13" width="1" height="1" fill="#0b1f33"/>
+                <rect x="10" y="13" width="1" height="1" fill="#0b1f33"/>
+                <rect x="12" y="13" width="1" height="1" fill="#0b1f33"/>
+                <rect x="14" y="13" width="1" height="1" fill="#0b1f33"/>
+                <rect x="16" y="14" width="1" height="1" fill="#0b1f33"/>
+                <rect x="18" y="14" width="1" height="1" fill="#0b1f33"/>
+                <rect x="20" y="14" width="1" height="1" fill="#0b1f33"/>
+                <rect x="22" y="14" width="1" height="1" fill="#0b1f33"/>
+                <rect x="24" y="14" width="1" height="1" fill="#0b1f33"/>
+                <rect x="26" y="14" width="1" height="1" fill="#0b1f33"/>
+                <rect x="2" y="15" width="1" height="1" fill="#0b1f33"/>
+                <rect x="4" y="15" width="1" height="1" fill="#0b1f33"/>
+                <rect x="6" y="15" width="1" height="1" fill="#0b1f33"/>
+                <rect x="9" y="15" width="1" height="1" fill="#0b1f33"/>
+                <rect x="11" y="15" width="1" height="1" fill="#0b1f33"/>
+                <rect x="13" y="15" width="1" height="1" fill="#0b1f33"/>
+                <rect x="15" y="15" width="1" height="1" fill="#0b1f33"/>
+                <rect x="17" y="15" width="1" height="1" fill="#0b1f33"/>
+                <rect x="19" y="16" width="1" height="1" fill="#0b1f33"/>
+                <rect x="21" y="16" width="1" height="1" fill="#0b1f33"/>
+                <rect x="23" y="16" width="1" height="1" fill="#0b1f33"/>
+                <rect x="25" y="16" width="1" height="1" fill="#0b1f33"/>
+                <rect x="27" y="16" width="1" height="1" fill="#0b1f33"/>
+                <rect x="3" y="17" width="1" height="1" fill="#0b1f33"/>
+                <rect x="5" y="17" width="1" height="1" fill="#0b1f33"/>
+                <rect x="7" y="17" width="1" height="1" fill="#0b1f33"/>
+                <rect x="10" y="17" width="1" height="1" fill="#0b1f33"/>
+                <rect x="12" y="17" width="1" height="1" fill="#0b1f33"/>
+                <rect x="14" y="17" width="1" height="1" fill="#0b1f33"/>
+                <rect x="16" y="17" width="1" height="1" fill="#0b1f33"/>
+                <rect x="18" y="17" width="1" height="1" fill="#0b1f33"/>
+                <rect x="20" y="18" width="1" height="1" fill="#0b1f33"/>
+                <rect x="22" y="18" width="1" height="1" fill="#0b1f33"/>
+                <rect x="24" y="18" width="1" height="1" fill="#0b1f33"/>
+                <rect x="26" y="18" width="1" height="1" fill="#0b1f33"/>
+                <rect x="9" y="19" width="1" height="1" fill="#0b1f33"/>
+                <rect x="11" y="19" width="1" height="1" fill="#0b1f33"/>
+                <rect x="13" y="19" width="1" height="1" fill="#0b1f33"/>
+                <rect x="15" y="19" width="1" height="1" fill="#0b1f33"/>
+                <rect x="17" y="19" width="1" height="1" fill="#0b1f33"/>
+                <rect x="19" y="19" width="1" height="1" fill="#0b1f33"/>
+                <rect x="9" y="21" width="1" height="1" fill="#0b1f33"/>
+                <rect x="11" y="21" width="1" height="1" fill="#0b1f33"/>
+                <rect x="13" y="21" width="1" height="1" fill="#0b1f33"/>
+                <rect x="15" y="21" width="1" height="1" fill="#0b1f33"/>
+                <rect x="17" y="21" width="1" height="1" fill="#0b1f33"/>
+                <rect x="10" y="22" width="1" height="1" fill="#0b1f33"/>
+                <rect x="12" y="22" width="1" height="1" fill="#0b1f33"/>
+                <rect x="14" y="23" width="1" height="1" fill="#0b1f33"/>
+                <rect x="16" y="23" width="1" height="1" fill="#0b1f33"/>
+                <rect x="18" y="23" width="1" height="1" fill="#0b1f33"/>
+                <rect x="9" y="24" width="1" height="1" fill="#0b1f33"/>
+                <rect x="11" y="24" width="1" height="1" fill="#0b1f33"/>
+                <rect x="13" y="24" width="1" height="1" fill="#0b1f33"/>
+                <rect x="15" y="25" width="1" height="1" fill="#0b1f33"/>
+                <rect x="17" y="25" width="1" height="1" fill="#0b1f33"/>
+                <rect x="19" y="25" width="1" height="1" fill="#0b1f33"/>
+                <rect x="10" y="26" width="1" height="1" fill="#0b1f33"/>
+                <rect x="12" y="26" width="1" height="1" fill="#0b1f33"/>
+                <rect x="14" y="26" width="1" height="1" fill="#0b1f33"/>
+                <rect x="16" y="27" width="1" height="1" fill="#0b1f33"/>
+                <rect x="18" y="27" width="1" height="1" fill="#0b1f33"/>
+                <rect x="26" y="26" width="1" height="1" fill="#0b1f33"/>
+                <rect x="27" y="25" width="1" height="1" fill="#0b1f33"/>
+                <rect x="25" y="27" width="1" height="1" fill="#0b1f33"/>
+              </svg>
+            </div>
+            <p class="ticket-pnr">PNR · TG-7K4M2</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="ag" aria-labelledby="partners-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">Ağ</p>
+          <h2 id="partners-title">İş ortakları ve feribot ağı</h2>
+          <p class="section-desc">İş ortakları ve operatör ağı.</p>
+        </div>
+        <div class="partner-grid" id="partner-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="yorumlar" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">Deneyim</p>
+          <h2 id="reviews-title">Görüşler</h2>
+          <p class="section-desc">Kullanıcı ve paydaş geri bildirimleri.</p>
+        </div>
+        <div class="review-grid" id="review-grid"></div>
+      </div>
+    </section>
+
+    <section class="section section-cta" id="cta-alan" aria-labelledby="cta-title" style="--cta-image: url('assets/images/slides/slide-4.jpg')">
+      <div class="container cta-inner">
+        <h2 id="cta-title">Deniz ulaşımı teknolojisinde yanınızdayız.</h2>
+        <div class="cta-actions">
+          <a class="btn btn-accent" href="#iletisim" data-panel="iletisim" id="cta-contact-btn">İletişim</a>
+          <a class="btn btn-ghost btn-hero-ghost" href="#hakkimizda" data-panel="hakkimizda">Hakkımızda</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand-block">
         <img class="footer-logo" src="assets/images/logo.png" alt="Ticket-Go" width="120" height="88" loading="lazy" decoding="async" />
-        <p>Deniz ulaşımında güvenli ve merkezi teknoloji çözümleri.</p>
-        <p class="footer-copy">© <span id="footer-year">2026</span> Ticket-Go. Tüm hakları saklıdır.</p>
+        <p id="footer-blurb">Ticket-Go; deniz ulaşımı ve feribot biletleme alanında teknoloji altyapısı sunan kurumsal bir platformdur.</p>
+        <p class="footer-copy">© <span id="footer-year">2026</span> TicketGo. Tüm hakları saklıdır.</p>
       </div>
-      <nav class="footer-col" aria-label="Kurumsal bağlantılar">
-        <h3>Kurumsal</h3>
-        <button type="button" class="footer-link-btn" data-panel="hakkimizda">Hakkımızda</button>
-        <button type="button" class="footer-link-btn" data-panel="iletisim">İletişim</button>
+      <nav class="footer-col" aria-label="Keşfet">
+        <h3>Keşfet</h3>
+        <a href="#teknoloji">Teknoloji</a>
+        <a href="#mobil-bilet">Ürün</a>
       </nav>
-      <nav class="footer-col" aria-label="Yasal bağlantılar">
+      <nav class="footer-col" aria-label="Yasal">
         <h3>Yasal</h3>
         <button type="button" class="footer-link-btn" data-panel="gizlilik">Gizlilik Politikası</button>
         <button type="button" class="footer-link-btn" data-panel="kvkk">KVKK Aydınlatma</button>
-        <button type="button" class="footer-link-btn" data-panel="hakkimizda">Kurumsal Detay</button>
       </nav>
       <div class="footer-col">
-        <h3>İletişim</h3>
+        <h3>Kurumsal</h3>
+        <button type="button" class="footer-link-btn" data-panel="hakkimizda">Hakkımızda</button>
+        <button type="button" class="footer-link-btn" data-panel="iletisim">İletişim</button>
         <a href="tel:+905473195005">0547 319 50 05</a>
         <a href="mailto:info@ticket-go.net">info@ticket-go.net</a>
-        <a href="https://ticket-go.net" rel="noopener noreferrer">ticket-go.net</a>
       </div>
     </div>
   </footer>
@@ -613,6 +885,7 @@
     </style>
   </noscript>
 
+  <script src="assets/js/site-content.js" defer></script>
   <script src="assets/js/app.js" defer></script>
 </body>
 </html>

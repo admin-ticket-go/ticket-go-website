@@ -28,6 +28,7 @@ const required = [
   ".gitignore",
   "assets/css/style.css",
   "assets/js/app.js",
+  "assets/js/site-content.js",
   "assets/images/logo.png",
   "assets/images/logo-mark.png",
   "assets/images/favicon.png",

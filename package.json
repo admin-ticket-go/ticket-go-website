@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "Ticket-Go (ticket-go.net) kurumsal tanıtım sitesi arayüzü — statik HTML/CSS/JS",
-  "author": "Turbudur Turizm Şey Ltd. Şti.",
+  "author": "ticketgo.net Teknoloji A.Ş.",
   "license": "UNLICENSED",
   "engines": {
     "node": ">=18"
