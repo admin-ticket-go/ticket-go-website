@@ -1,0 +1,24 @@
+---
+description: Kullanıcı «geri getir» dediğinde vitrin kaydını geri yükle
+alwaysApply: true
+---
+
+# ticket-go.net — Geri Getir
+
+Kullanıcı **geri getir**, **bu kaydı getir**, **vitrin kaydını geri getir** veya **kaydı geri yükle** dediğinde:
+
+1. Kökün `ticket-go.net web sitesi arayüz github` olduğundan emin ol.
+2. `DEVAM.md` oku.
+3. Working tree’yi etiket `kayit-vitrin` haline getir:
+
+```bash
+git checkout kayit-vitrin -- .
+```
+
+Yerel değişiklikler varsa önce kısaca uyar; kullanıcı onayladıysa `git reset --hard kayit-vitrin` kullan.
+
+4. Kardeş klasöre senkronize et (`ticket-go.net web sitesi arayüz`).
+5. `npm run check` çalıştır.
+6. Kullanıcıya: kayıt geri geldi + etiket adı.
+
+Yeni «kaydet» istenirse commit al, `kayit-vitrin` etiketini güncelle, `DEVAM.md` yaz.

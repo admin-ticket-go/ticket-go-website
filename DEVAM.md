@@ -4,8 +4,9 @@
 
 | Alan | Değer |
 |------|--------|
-| Tarih | 2026-08-05 |
+| Tarih | 2026-08-06 |
 | Etiket | `kayit-vitrin` |
+| Commit hedefi | `ticket-go.net web sitesi arayüz github` → GitHub `admin-ticket-go/ticket-go-website` |
 | Anlam | Kurumsal vitrin yüzü — sefer arama yok |
 
 ### Bu kayıtta olanlar
@@ -15,7 +16,7 @@
 - Öne çıkan rota kartları yok
 - Avantaj kartlarında SVG ikonlar
 - Dijital bilet mockup + sahte QR (demo yazısı yok)
-- Büyük sol üst logo
+- Sol üst logo büyütüldü (~78px)
 - Sticky header (şeffaf → navy)
 
 ## «geri getir» komutu
