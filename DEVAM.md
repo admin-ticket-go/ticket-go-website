@@ -4,8 +4,10 @@
 
 | Alan | Değer |
 |------|--------|
-| Tarih | 2026-08-05 |
+| Tarih | 2026-08-06 |
+| Klasör | `~/Desktop/ticket-go.net web sitesi arayüz` (tek kaynak) |
 | Etiket | `kayit-vitrin` |
+| Remote | `admin-ticket-go/ticket-go-website` |
 | Anlam | Kurumsal vitrin yüzü — sefer arama yok |
 
 ### Bu kayıtta olanlar
@@ -22,7 +24,7 @@
 
 Kullanıcı **geri getir**, **bu kaydı getir** veya **vitrin kaydını geri getir** dediğinde:
 
-1. Kök: `ticket-go.net web sitesi arayüz github` (veya eş kardeş klasör)
+1. Kök: `~/Desktop/ticket-go.net web sitesi arayüz` (tek klasör)
 2. Çalıştır:
 
 ```bash
@@ -31,14 +33,7 @@ git checkout kayit-vitrin -- .
 git reset --hard kayit-vitrin
 ```
 
-3. Kardeş klasöre senkronize et:
-
-```bash
-# github → "ticket-go.net web sitesi arayüz"
-rsync -a --exclude node_modules --exclude .git --exclude dist ./ "../ticket-go.net web sitesi arayüz/"
-```
-
-4. Doğrula: `npm run check`
+3. Doğrula: `npm run check`
 
 ## Preview
 

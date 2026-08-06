@@ -7,7 +7,7 @@ alwaysApply: true
 
 Kullanıcı **geri getir**, **bu kaydı getir**, **vitrin kaydını geri getir** veya **kaydı geri yükle** dediğinde:
 
-1. Kökün `ticket-go.net web sitesi arayüz github` olduğundan emin ol.
+1. Kökün `~/Desktop/ticket-go.net web sitesi arayüz` olduğundan emin ol (tek klasör).
 2. `DEVAM.md` oku.
 3. Working tree’yi etiket `kayit-vitrin` haline getir:
 
@@ -17,8 +17,7 @@ git checkout kayit-vitrin -- .
 
 Yerel değişiklikler varsa önce kısaca uyar; kullanıcı onayladıysa `git reset --hard kayit-vitrin` kullan.
 
-4. Kardeş klasöre senkronize et (`ticket-go.net web sitesi arayüz`).
-5. `npm run check` çalıştır.
-6. Kullanıcıya: kayıt geri geldi + etiket adı.
+4. `npm run check` çalıştır.
+5. Kullanıcıya: kayıt geri geldi + etiket adı.
 
 Yeni «kaydet» istenirse commit al, `kayit-vitrin` etiketini güncelle, `DEVAM.md` yaz.
