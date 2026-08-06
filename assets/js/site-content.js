@@ -4,7 +4,7 @@
  */
 window.TG_HOME = {
   hero: {
-    eyebrow: "ticketgo.net Teknoloji A.Ş.",
+    eyebrow: "TicketGo Teknoloji A.Ş.",
     title: "Deniz Ulaşımında Güvenilir Teknoloji",
     lead:
       "Ticket-Go; feribot biletleme ve deniz ulaşımı operasyonları için geliştirilmiş kurumsal teknoloji platformudur.",

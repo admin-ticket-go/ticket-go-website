@@ -2,7 +2,7 @@
 
 **Proje adı:** ticket-go.net web sitesi arayüz  
 **Domain:** https://ticket-go.net  
-**Şirket:** ticketgo.net Teknoloji A.Ş.
+**Şirket:** TicketGo Teknoloji A.Ş.
 
 ## Projenin amacı
 
@@ -134,5 +134,5 @@ Uzak depo: `https://github.com/admin-ticket-go/ticket-go-website.git`
 
 ## Lisans
 
-Kaynak kod ve içerik ticketgo.net Teknoloji A.Ş. mülkiyetindedir.  
+Kaynak kod ve içerik TicketGo Teknoloji A.Ş. mülkiyetindedir.  
 İzinsiz kopyalama / yeniden yayınlama yasaktır.
