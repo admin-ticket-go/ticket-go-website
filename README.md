@@ -23,7 +23,7 @@ Bu depo **yalnızca arayüz** içerir. Backend API, üyelik, ödeme formu, analy
 ## Kurulum adımları
 
 ```bash
-cd "/Users/ticket-go/Desktop/ticket-go.net web sitesi arayüz github"
+cd "/Users/ticket-go/Desktop/ticket-go.net web sitesi arayüz"
 npm install
 ```
 
