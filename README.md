@@ -1,7 +1,7 @@
 # Ticket-Go — Kurumsal Web Sitesi Arayüzü
 
-**Proje adı:** ticket-go.net web sitesi arayüz  
-**Domain:** https://ticket-go.net  
+**Proje adı:** ticket-go.net web sitesi arayüz
+**Domain:** https://ticket-go.net
 **Şirket:** TicketGo Teknoloji A.Ş.
 
 ## Projenin amacı
@@ -65,7 +65,8 @@ npm run check
 
 ```text
 .
-├── index.html              # Ana sayfa
+├── index.html                 # Ana sayfa
+├── gizlilik-politikasi.html   # Bağımsız Gizlilik Politikası (Play URL adayı)
 ├── favicon.ico
 ├── robots.txt
 ├── sitemap.xml
@@ -73,6 +74,8 @@ npm run check
 ├── .gitignore
 ├── .env.example
 ├── README.md
+├── docs/
+│   └── PRIVACY_PAGE_DELIVERY.md
 ├── scripts/
 │   ├── build.js            # dist/ üretim
 │   └── check.js            # asset / yol kontrolü
@@ -90,9 +93,13 @@ npm run check
             ├── slide-1.jpg … slide-6.jpg
 ```
 
+**Gizlilik politikası (Play):** `https://www.ticket-go.net/gizlilik-politikasi`
+Yerel: `npm run build && npm run preview` → http://127.0.0.1:4173/gizlilik-politikasi
+Canlı dağıtım yapılmadan Play URL’si hazır sayılmaz.
+
 ## Ortam değişkenleri
 
-Bu proje statiktir; zorunlu ortam değişkeni yoktur.  
+Bu proje statiktir; zorunlu ortam değişkeni yoktur.
 Detay: `.env.example`
 
 `.env` dosyası Git’e eklenmez (`.gitignore`).
@@ -134,5 +141,5 @@ Uzak depo: `https://github.com/admin-ticket-go/ticket-go-website.git`
 
 ## Lisans
 
-Kaynak kod ve içerik TicketGo Teknoloji A.Ş. mülkiyetindedir.  
+Kaynak kod ve içerik TicketGo Teknoloji A.Ş. mülkiyetindedir.
 İzinsiz kopyalama / yeniden yayınlama yasaktır.

@@ -9,7 +9,14 @@ const path = require("path");
 const root = path.join(__dirname, "..");
 const dist = path.join(root, "dist");
 
-const COPY_FILES = ["index.html", "favicon.ico", "robots.txt", "sitemap.xml"];
+const COPY_FILES = [
+  "index.html",
+  "gizlilik-politikasi.html",
+  "hesap-silme.html",
+  "favicon.ico",
+  "robots.txt",
+  "sitemap.xml",
+];
 const COPY_DIRS = ["assets"];
 
 function rmDir(dir) {

@@ -659,6 +659,56 @@ p:last-child { margin-bottom: 0; }
   color: var(--muted); font-size: 0.95rem;
 }
 
+/* Standalone legal page (/gizlilik-politikasi) */
+.legal-page .site-header { position: sticky; top: 0; }
+.legal-page-main {
+  padding: calc(var(--header-h) + 1.5rem) 0 3.5rem;
+  background:
+    linear-gradient(180deg, var(--surface-alt) 0%, var(--white) 18%, var(--white) 100%);
+}
+.legal-page-wrap { max-width: min(100% - 2rem, 820px); }
+.legal-breadcrumb {
+  margin: 0 0 1.25rem; font-size: 0.9rem; color: var(--muted); font-weight: 600;
+}
+.legal-breadcrumb a { color: var(--navy-800); text-decoration: none; }
+.legal-breadcrumb a:hover { color: var(--gold); }
+.legal-document {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 1.75rem 1.5rem 2rem;
+}
+.legal-document-header { margin-bottom: 1.5rem; }
+.legal-document h1 {
+  margin: 0 0 0.85rem; font-size: clamp(1.55rem, 2.5vw, 2rem); color: var(--navy-950);
+}
+.legal-document h2 {
+  margin: 2rem 0 0.75rem; font-size: 1.2rem; color: var(--navy-900);
+  padding-top: 0.35rem; border-top: 1px solid var(--border);
+}
+.legal-document h2:first-of-type { border-top: 0; padding-top: 0; }
+.legal-document h3 {
+  margin: 1.35rem 0 0.55rem; font-size: 1.02rem; color: var(--navy-800);
+}
+.legal-document p, .legal-document ul, .legal-document ol { margin: 0 0 1rem; }
+.legal-document ul, .legal-document ol { padding-left: 1.25rem; }
+.legal-document li { margin-bottom: 0.35rem; }
+.legal-meta-inline { margin: 0.75rem 0 0; color: var(--muted); font-size: 0.95rem; }
+.legal-panel-note {
+  margin: 0 0 1.25rem; padding: 0.9rem 1rem; border-radius: var(--radius);
+  background: var(--turquoise-soft); border: 1px solid rgba(26, 166, 183, 0.35);
+  color: var(--navy-900); font-weight: 600;
+}
+.legal-panel-note a { color: var(--navy-900); }
+.legal-actions { margin: 1.15rem 0 0.35rem; }
+.legal-actions .btn { min-width: min(100%, 20rem); }
+
+@media (max-width: 768px) {
+  .legal-page-main { padding-top: calc(var(--header-h) + 1rem); padding-bottom: 2.5rem; }
+  .legal-document { padding: 1.25rem 1rem 1.5rem; border-radius: var(--radius); }
+}
+
 .info-panel .contact-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 0.5rem; }
 .info-panel .contact-card {
   background: var(--surface-alt); border: 1px solid var(--border);

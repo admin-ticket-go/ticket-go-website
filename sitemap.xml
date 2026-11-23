@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Yayın öncesi [DOMAIN] değerini gerçek alan adıyla değiştirin. -->
   <url>
-    <loc>https://[DOMAIN]/</loc>
+    <loc>https://www.ticket-go.net/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.ticket-go.net/gizlilik-politikasi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ticket-go.net/hesap-silme</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
